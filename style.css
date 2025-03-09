@@ -34,7 +34,7 @@ li {
   z-index: 999;
   position: fixed;
   width: 100%;
-  height: calc(100vh - 150px);
+  height: 100vh;
   transform: translateX(-100%);
   transition: ease-in-out 300ms;
 }
@@ -71,9 +71,12 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
   color: #fafafa;
+  background-color: #141414;
 }
 
 header {
+  position: fixed;
+  z-index: 9999;
   width: 100%;
   height: 150px;
   background-color: #141414;
@@ -137,7 +140,7 @@ nav li:hover {
 .banner {
   background-color: #242424;
   width: 100%;
-  height: calc(100vh - 150px);
+  height: 100vh;
 }
 
 /* Font Family */
@@ -158,7 +161,7 @@ nav li:hover {
   position: absolute;
   width: 100%;
   height: inherit;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -170,7 +173,8 @@ nav li:hover {
   /* font-family: "Anton", sans-serif; */
   font-family: "Big Shoulders Inline", sans-serif;
   letter-spacing: 5.5px;
-  color: #fafafaf1;
+  color: #fafafa;
+  margin-top: 140px;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
@@ -183,11 +187,24 @@ nav li:hover {
   text-align: left;
 }
 
+.overlay .us-flag {
+  width: 60px;
+}
+
+.overlay .fa-earth-americas {
+  color: #fafafa;
+  transition: ease-in-out 200ms;
+}
+
+.overlay .fa-earth-americas:hover {
+  color: #151515;
+}
+
 .slides {
   position: relative;
   z-index: 0;
   width: 100%;
-  height: calc(100vh - 150px);
+  height: 100vh;
   background-image: url("assets/images/barber-banner-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
