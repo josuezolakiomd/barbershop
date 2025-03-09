@@ -90,7 +90,7 @@ header-right {
   color: #fafafa; /* Light text */
   font-size: 1rem;
   font-weight: bold;
-  padding: 10px;
+  padding: 15px;
   border: 2px solid #28a745; /* Green border to attract attention */
   border-radius: 0.35rem;
   cursor: pointer;
@@ -158,8 +158,29 @@ nav li:hover {
   position: absolute;
   width: 100%;
   height: inherit;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
+}
+
+.overlay h2 {
+  font-size: 4rem;
+  max-width: 700px;
+  text-align: left;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  /* font-family: "Anton", sans-serif; */
+  font-family: "Big Shoulders Inline", sans-serif;
+  letter-spacing: 5.5px;
+  color: #fafafaf1;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.overlay p {
+  max-width: 700px;
+  font-size: 1.4rem;
+  color: #fafafac2;
+  margin-bottom: 100px;
+  text-align: left;
 }
 
 .slides {
@@ -198,5 +219,9 @@ nav li:hover {
 
   .fa-scissors {
     font-size: 3rem;
+  }
+
+  .overlay {
+    padding: 0 20px;
   }
 }
