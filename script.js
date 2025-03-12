@@ -5,10 +5,7 @@ const smDeviceLinks = document.querySelector(".sm-device-links");
 
 btnBook.forEach((element) => {
   element.addEventListener("click", function () {
-    window.open(
-      "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3sBdm-vGLpPR7rwAtaEBeCgD8pyBwsA-TqiKo9AGs6m3FZeaQcZhe0MDY-lDgEnhka2fLwMFy4?gv=true",
-      "_blank"
-    );
+    window.open("https://calendar.app.google/LupWmvQeN8qYnhCD8", "_blank");
   });
 });
 

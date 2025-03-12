@@ -211,6 +211,12 @@ nav li:hover {
   background-size: cover;
 }
 
+/* Section About Us */
+
+.about-us {
+  height: 700px;
+}
+
 /* Hide the element when the screen width is below 500px */
 @media screen and (max-width: 900px) {
   .logo-text,
