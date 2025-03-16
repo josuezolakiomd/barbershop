@@ -89,12 +89,15 @@ header-right {
 }
 
 .btn-book {
-  background-color: #28a745; /* Dark background */
+  /* background-color: #28a745; Dark background */
+  background-color: hsl(31, 63%, 57%); /* Dark background */
   color: #fafafa; /* Light text */
   font-size: 1rem;
   font-weight: bold;
   padding: 15px;
-  border: 2px solid #28a745; /* Green border to attract attention */
+  /* border: 2px solid #28a745; Green border to attract attention */
+  border: 2px solid hsl(31, 63%, 57%); /* Green border to attract attention */
+
   border-radius: 0.35rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -107,10 +110,10 @@ header-right {
 
 /* Hover effect */
 .btn-book:hover {
-  background-color: #28a745; /* Green background */
+  background-color: hsl(31, 63%, 57%); /* Green background */
   color: #fafafa;
   transform: scale(1.06);
-  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5);
+  box-shadow: 0 6px 15px rgba(0, 3, 1, 0.283);
 }
 
 .container {
@@ -205,7 +208,7 @@ nav li:hover {
   z-index: 0;
   width: 100%;
   height: 100vh;
-  background-image: url("./../images/barber-banner-1.jpg");
+  background-image: url("./../images/bg3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -289,10 +292,67 @@ nav li:hover {
   transition: ease-in-out 0.2s;
 }
 
+/* Section Clients */
+
+.clients {
+  background-color: red;
+}
+
 /* Section About Us */
 
 .about-us {
-  height: 700px;
+  height: 1300px;
+}
+
+/* Section BG */
+
+.bg-section-1 {
+  width: 100%;
+  height: 600px !important;
+}
+
+.bg-section-1-container {
+  text-transform: uppercase;
+  /* color: #121212; */
+  border-radius: 0.3rem;
+  width: 300px;
+  padding: 50px;
+  /* background-color: #fafafa10; */
+}
+
+/* General Configuration */
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This allows scrolling */
+}
+
+.bg1 {
+  background-image: url("./../images/bg1.jpg");
+}
+
+/* Initial state (hidden) */
+.fade-in {
+  opacity: 0;
+  transform: translateX(100px); /* Start off-screen */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Left side effect */
+.fade-in.left {
+  transform: translateX(-100px);
+}
+
+/* Active state (appears when scrolled into view) */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Hide the element when the screen width is below 560px */
