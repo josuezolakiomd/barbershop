@@ -448,6 +448,10 @@ nav li:hover {
   .clients-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .services-grid {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 900px) {
