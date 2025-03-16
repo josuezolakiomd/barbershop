@@ -67,6 +67,12 @@ li {
   justify-content: space-between;
 }
 
+html,
+body {
+  overflow-x: hidden; /* Hides horizontal scrolling */
+  width: 100%; /* Ensures no extra width */
+}
+
 body {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -339,6 +345,8 @@ nav li:hover {
 
 /* Initial state (hidden) */
 .fade-in {
+  scrollbar-width: none;
+
   opacity: 0;
   transform: translateX(100px); /* Start off-screen */
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -346,11 +354,15 @@ nav li:hover {
 
 /* Left side effect */
 .fade-in.left {
+  scrollbar-width: none;
+
   transform: translateX(-100px);
 }
 
 /* Active state (appears when scrolled into view) */
 .fade-in.visible {
+  scrollbar-width: none;
+
   opacity: 1;
   transform: translateX(0);
 }
