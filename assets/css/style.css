@@ -226,24 +226,25 @@ nav li:hover {
   background-color: transparent;
 }
 
-.headers-container {
+.headers-container,
+.clients-container {
   margin: 100px 0;
   padding: 50px;
 }
 
-.headers-container h2,
-.headers-container p {
+.headline-title,
+.headline-desc {
   text-transform: uppercase;
 }
 
-.headers-container h2 {
+.headline-title {
   color: hsl(31, 63%, 57%);
   font-size: 1.2rem;
   font-weight: normal;
   margin-bottom: 10px;
 }
 
-.headers-container p {
+.headline-desc {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -300,8 +301,81 @@ nav li:hover {
 
 /* Section Clients */
 
-/* .clients {
-  background-color: red;
+.clients {
+  background-color: transparent;
+}
+
+.clients-grid {
+  background-color: transparent;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 150px;
+}
+
+.client-item {
+  background-color: #121212;
+  border-radius: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  /* padding: 50px; */
+}
+
+.client-overlay-photo {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: inherit;
+}
+
+.client-photo {
+  width: 100%;
+  height: 450px;
+  background-color: hsla(0, 0%, 8%, 0.435);
+  margin-bottom: 20px;
+}
+
+.client-name {
+  margin: 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: hsl(31, 63%, 57%);
+}
+
+.client-desc {
+  margin: 20px;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.client-rating {
+  margin: 20px;
+  font-size: 3rem;
+}
+
+.client-1 {
+  background-image: url("./../images/1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.client-2 {
+  background-image: url("./../images/4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.client-3 {
+  background-image: url("./../images/2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .clients-container {
+  background-color: green;
 } */
 
 /* Section About Us */
@@ -370,7 +444,8 @@ nav li:hover {
 /* Hide the element when the screen width is below 560px */
 
 @media (max-width: 560px) {
-  .services-grid {
+  .services-grid,
+  .clients-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -403,6 +478,10 @@ nav li:hover {
 
   .overlay {
     padding: 0 20px;
+  }
+
+  #bg-section-1 {
+    display: none;
   }
 }
 
