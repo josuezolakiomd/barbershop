@@ -66,6 +66,9 @@ li {
 .flex-jc-sb {
   justify-content: space-between;
 }
+.flex-jc-sa {
+  justify-content: space-around;
+}
 
 html,
 body {
@@ -261,10 +264,6 @@ nav li:hover {
   color: hsl(31, 63%, 57%);
 }
 
-/* .services-container {
-  background-color: #28a745;
-} */
-
 .services-grid {
   background-color: transparent;
   display: grid;
@@ -374,24 +373,170 @@ nav li:hover {
   background-repeat: no-repeat;
 }
 
+.see-more-btn {
+  border-radius: 0.25rem;
+  width: 150px;
+  padding: 20px;
+  margin-bottom: 150px;
+  background-color: #242424;
+  font-weight: bold;
+}
+
+.clients-gallery-modal-container {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(0, 0%, 7%, 0.862);
+}
+
+.clients-gallery-modal {
+  z-index: 9999;
+  width: 1100px;
+  height: 700px;
+  background-color: #fafafa;
+}
+
 /* .clients-container {
   background-color: green;
 } */
 
-/* Section About Us */
+/* Section About Me */
 
-.about-us {
+/* .about-me {
   height: 1300px;
+} */
+
+.about-me-grid {
+  background-color: transparent;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 150px;
 }
+
+.about-me-item {
+  height: 700px;
+  background-color: #121212;
+  border-radius: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.about-me-item .headers-container {
+  padding: 20px !important;
+  margin: 20px;
+}
+
+.about-me-bg {
+  background-image: url("./../images/3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-me-bg .overlay {
+  left: 0;
+  top: 0;
+}
+
+.flag {
+  margin: 40px;
+}
+
+.flag {
+  width: 150px;
+  height: 150px;
+  background-image: url("./../icons/democratic-republic-of-the-congo-1758948.svg");
+}
+
+.author-desc {
+  font-size: 1.3rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: justify;
+}
+
+/* Section Footer */
+
+.footer-grid {
+  background-color: transparent;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 30px;
+  margin-bottom: 150px;
+}
+
+.footer-item {
+  padding: 20px;
+}
+
+.footer .logo-text,
+.footer .fa-location-dot {
+  color: hsl(31, 63%, 57%);
+}
+
+.footer .fa-location-dot {
+  font-size: 2.8rem;
+}
+
+.footer .address {
+  width: 200px;
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+
+.footer .bar {
+  width: 2px;
+  height: inherit;
+  margin-top: 0;
+  background-color: #242424;
+}
+
+.social-media .fa-brands {
+  font-size: 1.8rem;
+  padding: 0 10px;
+}
+
+.footer-item p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: hsl(31, 63%, 57%);
+}
+
+.footer-item .number {
+  padding: 0 40px;
+}
+
+/* .bb {
+  background-color: red;
+} */
+
+/* .video {
+  width: 100%;
+  border: 0.25rem;
+} */
 
 /* Section BG */
 
-.bg-section-1 {
+.bg-section-1,
+.bg-section-2 {
   width: 100%;
   height: 600px !important;
 }
 
-.bg-section-1-container {
+.bg-section-1-container,
+.bg-section-2-container {
   text-transform: uppercase;
   /* color: #121212; */
   border-radius: 0.3rem;
@@ -417,10 +562,13 @@ nav li:hover {
   background-image: url("./../images/bg1.jpg");
 }
 
+.bg2 {
+  background-image: url("./../images/bg2.jpg");
+}
+
 /* Initial state (hidden) */
 .fade-in {
   scrollbar-width: none;
-
   opacity: 0;
   transform: translateX(100px); /* Start off-screen */
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -445,12 +593,22 @@ nav li:hover {
 
 @media (max-width: 560px) {
   .services-grid,
-  .clients-grid {
+  .clients-grid,
+  .about-me-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .services-grid {
     margin-bottom: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-item p {
+    font-size: 1.1rem;
+    margin: 20px;
   }
 }
 
@@ -484,8 +642,13 @@ nav li:hover {
     padding: 0 20px;
   }
 
-  #bg-section-1 {
+  #bg-section-1,
+  #bg-section-2 {
     display: none;
+  }
+
+  .see-more-btn {
+    margin-bottom: 0;
   }
 }
 
